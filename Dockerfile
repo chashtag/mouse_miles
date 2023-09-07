@@ -8,4 +8,6 @@ COPY nginx.conf /etc/nginx/
 COPY entrypoint.sh /
 COPY track.py /
 COPY web.py /
+COPY templates /
+WORKDIR /
 ENTRYPOINT [ "/entrypoint.sh" ]
