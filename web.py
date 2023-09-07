@@ -1,7 +1,7 @@
 from flask import Flask, render_template, request
 
 
-app = Flask(__name__)
+app = Flask(__name__,template_folder='/')
 
 @app.route("/")
 def index():
@@ -14,4 +14,4 @@ def index():
     return render_template('index.html',remotes=r_list,miles=open('/dev/mouse_miles').read())
 
 if __name__ == '__main__':
-    app.run('0.0.0.0',template_folder='/')
+    app.run('0.0.0.0')
